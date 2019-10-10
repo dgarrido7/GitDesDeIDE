@@ -1,3 +1,5 @@
+//proba
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
@@ -16,14 +18,14 @@ public class Main {
 		//Creem un array de cases on nomes tindrem les cases amb contingut
 		Casa[] Loc = new Casa[0];
 		
-		//Creacio del mapa de cases mitjançant el fitxer del mapa i guardarem les cases en el array anteriorment creat
+		//Creacio del mapa de cases mitjanÃ§ant el fitxer del mapa i guardarem les cases en el array anteriorment creat
 		Mapa.MapaCases("cendrassi.txt");
 		Loc=Mapa.getCases();
 		
-		//Generem els trebalaldors mitjançant el fitxer de les rutes i el arraylist de membres
+		//Generem els trebalaldors mitjanÃ§ant el fitxer de les rutes i el arraylist de membres
 		Treballadors("cendrassi-rutes.txt",Membres);
 		
-		//Funcio que comparara les posicions les rutes de tots els treballadors amb les posicions de les cases i també revisara si la casa ha sigut visitada o no
+		//Funcio que comparara les posicions les rutes de tots els treballadors amb les posicions de les cases i tambÃ© revisara si la casa ha sigut visitada o no
 		for(int i=0;i<Membres.size();i++) {
 			for(int z=0;z<Loc.length;z++) {
 				for(int j=0;j<Membres.get(i).getRuta().length;j++) {
@@ -50,7 +52,7 @@ public class Main {
 		//sortida per pantalla de les cases no visitades
 		for(int i=0;i<Loc.length;i++) {
 			if(Loc[i].isVisitada()==false) {
-			System.out.println("La casa en les coordenades ("+Loc[i].getX()+","+Loc[i].getY()+") No ha sigut visitada i no s'han recaudat "+Loc[i].getPagament()+"€");
+			System.out.println("La casa en les coordenades ("+Loc[i].getX()+","+Loc[i].getY()+") No ha sigut visitada i no s'han recaudat "+Loc[i].getPagament()+"â‚¬");
 			}
 		}
 		
